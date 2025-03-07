@@ -3,6 +3,7 @@ package commands
 import (
 	"fmt"
 	"os/exec"
+	"usm/utils/color"
 )
 
 func aptUpdate() {
@@ -32,6 +33,9 @@ func aptUpgrade() {
 func UpdateSystem() {
 	println("Updating the system...")
 
+	color.Green("[1/2] Executing sudo apt update...\n")
 	aptUpdate()
+
+	color.Green("[2/2] Executing sudo apt upgrade...\n")
 	aptUpgrade()
 }
