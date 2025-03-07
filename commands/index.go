@@ -31,11 +31,11 @@ func aptUpgrade() {
 }
 
 func UpdateSystem() {
-	println("Updating the system...")
+	color.PrintLinesAround(color.BackgroundGreen("Updating the system..."))
 
-	color.Green("[1/2] Executing sudo apt update...\n")
+	color.PrintLinesAround(color.Green("[1/2] Executing sudo apt update...\n"))
 	aptUpdate()
 
-	color.Green("[2/2] Executing sudo apt upgrade...\n")
+	color.PrintLinesAround(color.Green("[2/2] Executing sudo apt upgrade...\n"))
 	aptUpgrade()
 }
